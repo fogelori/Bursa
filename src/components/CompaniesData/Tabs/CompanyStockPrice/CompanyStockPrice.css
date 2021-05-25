@@ -1,0 +1,10 @@
+/* .companyStockPrice {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+} */
+
+.companyStockPrice .searchDatesMain {
+  display: flex;
+  flex-wrap: wrap;
+}

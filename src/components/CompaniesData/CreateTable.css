@@ -1,0 +1,18 @@
+/* this workaround is from
+https://github.com/mui-org/material-ui-x/issues/417
+*/
+
+.MuiDataGrid-row,
+.MuiDataGrid-root .MuiDataGrid-cell,
+.rendering-zone {
+  max-height: none !important;
+}
+.MuiDataGrid-root .MuiDataGrid-window {
+  position: "relative !important";
+}
+.MuiDataGrid-root .MuiDataGrid-viewport {
+  max-height: none !important;
+}
+.MuiDataGrid-root {
+  height: 100% !important;
+}

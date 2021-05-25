@@ -1,0 +1,434 @@
+ # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+src - Copy/AnimatedMenuIcon.css
+src - Copy/AnimatedMenuIcon.js
+src - Copy/App.css
+src - Copy/App.js
+src - Copy/App.test.js
+src - Copy/App2.css
+src - Copy/index.css
+src - Copy/index.js
+src - Copy/logo.svg
+src - Copy/reportWebVitals.js
+src - Copy/setupTests.js
+src - Copy/components/CompaniesData/CompaniesData.css
+src - Copy/components/CompaniesData/CompaniesData.js
+src - Copy/components/CompaniesData/CompanyOverview.css
+src - Copy/components/CompaniesData/CompanyOverview.js
+src - Copy/components/CompaniesData/CreateTable.js
+src - Copy/components/CompaniesData/CustomToolbar.js
+src - Copy/components/CompaniesData/FetchFunctions.js
+src - Copy/components/CompaniesData/InputField.css
+src - Copy/components/CompaniesData/InputField.js
+src - Copy/components/CompaniesData/SearchDates.css
+src - Copy/components/CompaniesData/SearchDates.js
+src - Copy/components/CompaniesData/Tabs/CompanyTabs.js
+src - Copy/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src - Copy/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src - Copy/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src - Copy/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src - Copy/components/Home/Home.js
+src - Copy/components/NavBar/LargeScreenMenu.js
+src - Copy/components/NavBar/ListMenu.js
+src - Copy/components/NavBar/ListMenuItemLink.js
+src - Copy/components/NavBar/NavBar.js
+src - Copy/components/NavBar/SmallScreenMenu.js
+src - Copy/components/Router/RenderRoutes.js
+src - Copy/components/Router/Routes.js
+src - Copy (2)/AnimatedMenuIcon.css
+src - Copy (2)/AnimatedMenuIcon.js
+src - Copy (2)/App.css
+src - Copy (2)/App.js
+src - Copy (2)/App.test.js
+src - Copy (2)/App2.css
+src - Copy (2)/index.css
+src - Copy (2)/index.js
+src - Copy (2)/logo.svg
+src - Copy (2)/reportWebVitals.js
+src - Copy (2)/setupTests.js
+src - Copy (2)/useCustomTheme.js
+src - Copy (2)/components/CompaniesData/CompaniesData.css
+src - Copy (2)/components/CompaniesData/CompaniesData.js
+src - Copy (2)/components/CompaniesData/CreateTable.js
+src - Copy (2)/components/CompaniesData/CustomDateToolbar.js
+src - Copy (2)/components/CompaniesData/CustomTabs.js
+src - Copy (2)/components/CompaniesData/FetchFunctions.js
+src - Copy (2)/components/CompaniesData/InputField.css
+src - Copy (2)/components/CompaniesData/InputField.js
+src - Copy (2)/components/CompaniesData/makeStore.js
+src - Copy (2)/components/CompaniesData/SearchDates.css
+src - Copy (2)/components/CompaniesData/SearchDates.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyTabs old.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyTabs.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/CompanyDashboard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceBodyCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceItem.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinancialCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/ImedCard/ImedCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/OrganizeData.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/StocksCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReportDialog.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/DialogStore.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/FetchImedReports.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/OrganizeTableImedReports.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CompanyDetailsObject.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CompanyHeaderCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CompanyOverview.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CustomCardHeader.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CustomChart.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardHeader.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardRow.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/StockChart_checkifneedtodelete.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/TableCard.css
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/TableCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/ChartCard/ChartCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard - Copy.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/AccordionLine.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsHeader.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsLine.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyOverview/Old/RegularCard.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src - Copy (2)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyStockPrice/FetchStockPrice.js
+src - Copy (2)/components/CompaniesData/Tabs/CompanyStockPrice/OrganizeTableStockPrice.js
+src - Copy (2)/components/Home/Home.js
+src - Copy (2)/components/NavBar/LargeScreenMenu.js
+src - Copy (2)/components/NavBar/ListMenu.js
+src - Copy (2)/components/NavBar/ListMenuItemLink.js
+src - Copy (2)/components/NavBar/NavBar.js
+src - Copy (2)/components/NavBar/SmallScreenMenu.js
+src - Copy (2)/components/Router/RenderRoutes.js
+src - Copy (2)/components/Router/Routes.js
+src - Copy (2)/icons/FaxIcon.js
+src - Copy (3)/AnimatedMenuIcon.css
+src - Copy (3)/AnimatedMenuIcon.js
+src - Copy (3)/App.css
+src - Copy (3)/App.js
+src - Copy (3)/App.test.js
+src - Copy (3)/App2.css
+src - Copy (3)/hideHeaderStore.js
+src - Copy (3)/index.css
+src - Copy (3)/index.js
+src - Copy (3)/logo.svg
+src - Copy (3)/makeStore.js
+src - Copy (3)/reportWebVitals.js
+src - Copy (3)/setupTests.js
+src - Copy (3)/useCustomTheme.js
+src - Copy (3)/components/CompaniesData/CompaniesData.css
+src - Copy (3)/components/CompaniesData/CompaniesData.js
+src - Copy (3)/components/CompaniesData/CreateTable.css
+src - Copy (3)/components/CompaniesData/CreateTable.js
+src - Copy (3)/components/CompaniesData/CustomDateToolbar.js
+src - Copy (3)/components/CompaniesData/CustomTabs.js
+src - Copy (3)/components/CompaniesData/FetchFunctions.js
+src - Copy (3)/components/CompaniesData/InputField.css
+src - Copy (3)/components/CompaniesData/InputField.js
+src - Copy (3)/components/CompaniesData/SearchDates.css
+src - Copy (3)/components/CompaniesData/SearchDates.js
+src - Copy (3)/components/CompaniesData/useHideOnScrolled.js
+src - Copy (3)/components/CompaniesData/useVisibleHeader old.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyTabs old.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyTabs.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/CompanyDashboard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/CustomChartBar.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FetchFinStmts.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceBodyCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceItem.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinancialCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/ImedCard/ImedCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/OrganizeData.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/StocksCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReportDialog.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/DialogStore.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/FetchImedReports.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/OrganizeTableImedReports.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.css
+src - Copy (3)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CompanyDetailsObject.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CompanyHeaderCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CompanyOverview.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CustomCardHeader.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CustomChart.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardHeader.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardRow.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/TableCard.css
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/TableCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/ChartCard/ChartCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard - Copy.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/AccordionLine.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsHeader.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsLine.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/RegularCard.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyOverview/Old/StockChart_checkifneedtodelete.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src - Copy (3)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyStockPrice/FetchStockPrice.js
+src - Copy (3)/components/CompaniesData/Tabs/CompanyStockPrice/OrganizeTableStockPrice.js
+src - Copy (3)/components/Home/Home.js
+src - Copy (3)/components/NavBar/LargeScreenMenu.js
+src - Copy (3)/components/NavBar/ListMenu.js
+src - Copy (3)/components/NavBar/ListMenuItemLink.js
+src - Copy (3)/components/NavBar/NavBar.js
+src - Copy (3)/components/NavBar/SmallScreenMenu.js
+src - Copy (3)/components/Router/RenderRoutes.js
+src - Copy (3)/components/Router/Routes.js
+src - Copy (3)/icons/AutoTrendingIconDirection.js
+src - Copy (3)/icons/FaxIcon.js
+src - Copy (3)/tools/iXbrl2Json_old.js
+src - Copy (3)/tools/iXbrl2Json.js
+src - Copy (4)/AnimatedMenuIcon.css
+src - Copy (4)/AnimatedMenuIcon.js
+src - Copy (4)/App.css
+src - Copy (4)/App.js
+src - Copy (4)/App.test.js
+src - Copy (4)/App2.css
+src - Copy (4)/hideHeaderStore.js
+src - Copy (4)/index.css
+src - Copy (4)/index.js
+src - Copy (4)/logo.svg
+src - Copy (4)/makeStore.js
+src - Copy (4)/reportWebVitals.js
+src - Copy (4)/setupTests.js
+src - Copy (4)/useCustomTheme.js
+src - Copy (4)/components/CompaniesData/CompaniesData.css
+src - Copy (4)/components/CompaniesData/CompaniesData.js
+src - Copy (4)/components/CompaniesData/CreateTable.css
+src - Copy (4)/components/CompaniesData/CreateTable.js
+src - Copy (4)/components/CompaniesData/CustomDateToolbar.js
+src - Copy (4)/components/CompaniesData/CustomTabs.js
+src - Copy (4)/components/CompaniesData/FetchFunctions.js
+src - Copy (4)/components/CompaniesData/InputField.css
+src - Copy (4)/components/CompaniesData/InputField.js
+src - Copy (4)/components/CompaniesData/SearchDates.css
+src - Copy (4)/components/CompaniesData/SearchDates.js
+src - Copy (4)/components/CompaniesData/useHideOnScrolled.js
+src - Copy (4)/components/CompaniesData/useVisibleHeader old.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyTabs old.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyTabs.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/CompanyDashboard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/CustomChartBar.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FetchFinStmts.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceBodyCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceItem.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinancialCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/ImedCard/ImedCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/OrganizeData.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/StocksCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReportDialog.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/DialogStore.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/FetchImedReports.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/OrganizeTableImedReports.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.css
+src - Copy (4)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CompanyDetailsObject.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CompanyHeaderCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CompanyOverview.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CustomCardHeader.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CustomChart.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardHeader.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardRow.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/TableCard.css
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/TableCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/ChartCard/ChartCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard - Copy.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/AccordionLine.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsHeader.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsLine.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/RegularCard.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyOverview/Old/StockChart_checkifneedtodelete.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src - Copy (4)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyStockPrice/FetchStockPrice.js
+src - Copy (4)/components/CompaniesData/Tabs/CompanyStockPrice/OrganizeTableStockPrice.js
+src - Copy (4)/components/Home/Home.js
+src - Copy (4)/components/NavBar/LargeScreenMenu.js
+src - Copy (4)/components/NavBar/ListMenu.js
+src - Copy (4)/components/NavBar/ListMenuItemLink.js
+src - Copy (4)/components/NavBar/NavBar.js
+src - Copy (4)/components/NavBar/SmallScreenMenu.js
+src - Copy (4)/components/Router/RenderRoutes.js
+src - Copy (4)/components/Router/Routes.js
+src - Copy (4)/icons/AutoTrendingIconDirection.js
+src - Copy (4)/icons/FaxIcon.js
+src - Copy (4)/tools/iXbrl2Json_old.js
+src - Copy (4)/tools/iXbrl2Json.js
+src - Copy (5)/AnimatedMenuIcon.css
+src - Copy (5)/AnimatedMenuIcon.js
+src - Copy (5)/App.css
+src - Copy (5)/App.js
+src - Copy (5)/App.test.js
+src - Copy (5)/App2.css
+src - Copy (5)/hideHeaderStore.js
+src - Copy (5)/index.css
+src - Copy (5)/index.js
+src - Copy (5)/logo.svg
+src - Copy (5)/makeStore.js
+src - Copy (5)/reportWebVitals.js
+src - Copy (5)/setupTests.js
+src - Copy (5)/useCustomTheme.js
+src - Copy (5)/components/CompaniesData/CompaniesData.css
+src - Copy (5)/components/CompaniesData/CompaniesData.js
+src - Copy (5)/components/CompaniesData/CompaniesDataInputFieldSearch.js
+src - Copy (5)/components/CompaniesData/CreateTable.css
+src - Copy (5)/components/CompaniesData/CreateTable.js
+src - Copy (5)/components/CompaniesData/CustomDateToolbar.js
+src - Copy (5)/components/CompaniesData/CustomTabs.js
+src - Copy (5)/components/CompaniesData/FetchFunctions.js
+src - Copy (5)/components/CompaniesData/InputField.css
+src - Copy (5)/components/CompaniesData/InputField.js
+src - Copy (5)/components/CompaniesData/SearchDates.css
+src - Copy (5)/components/CompaniesData/SearchDates.js
+src - Copy (5)/components/CompaniesData/useHideOnScrolled.js
+src - Copy (5)/components/CompaniesData/useVisibleHeader old.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyTabs old.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyTabs.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/CompanyDashboard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/CustomChartBar.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FetchFinStmts.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceBodyCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceItem.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinancialCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/ImedCard/ImedCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/OrganizeData.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/StocksCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReportDialog.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/DialogStore.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/FetchImedReports.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/OrganizeTableImedReports.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.css
+src - Copy (5)/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CompanyDetailsObject.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CompanyHeaderCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CompanyOverview.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CustomCardHeader.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CustomChart.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardHeader.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardRow.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/TableCard.css
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/TableCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/ChartCard/ChartCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard - Copy.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/AccordionLine.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsHeader.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsLine.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/RegularCard.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyOverview/Old/StockChart_checkifneedtodelete.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src - Copy (5)/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyStockPrice/FetchStockPrice.js
+src - Copy (5)/components/CompaniesData/Tabs/CompanyStockPrice/OrganizeTableStockPrice.js
+src - Copy (5)/components/Home/Home.js
+src - Copy (5)/components/NavBar/LargeScreenMenu.js
+src - Copy (5)/components/NavBar/ListMenu.js
+src - Copy (5)/components/NavBar/ListMenuItemLink.js
+src - Copy (5)/components/NavBar/NavBar.js
+src - Copy (5)/components/NavBar/SmallScreenMenu.js
+src - Copy (5)/components/Router/RenderRoutes.js
+src - Copy (5)/components/Router/Routes.js
+src - Copy (5)/icons/AutoTrendingIconDirection.js
+src - Copy (5)/icons/FaxIcon.js
+src - Copy (5)/tools/iXbrl2Json_old.js
+src - Copy (5)/tools/iXbrl2Json.js
+src old/AnimatedMenuIcon.css
+src old/AnimatedMenuIcon.js
+src old/App.css
+src old/App.js
+src old/App.test.js
+src old/App2.css
+src old/index.css
+src old/index.js
+src old/logo.svg
+src old/reportWebVitals.js
+src old/setupTests.js
+src old/useCustomTheme.js
+src old/components/CompaniesData/CompaniesData.css
+src old/components/CompaniesData/CompaniesData.js
+src old/components/CompaniesData/CreateTable.js
+src old/components/CompaniesData/CustomDateToolbar.js
+src old/components/CompaniesData/CustomTabs.js
+src old/components/CompaniesData/FetchFunctions.js
+src old/components/CompaniesData/InputField.css
+src old/components/CompaniesData/InputField.js
+src old/components/CompaniesData/makeStore.js
+src old/components/CompaniesData/SearchDates.css
+src old/components/CompaniesData/SearchDates.js
+src old/components/CompaniesData/Tabs/CompanyTabs old.js
+src old/components/CompaniesData/Tabs/CompanyTabs.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/CompanyDashboard.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceBodyCard.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinanceItem.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/FinancialCard/FinancialCard.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/ImedCard/ImedCard.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/OrganizeData.js
+src old/components/CompaniesData/Tabs/CompanyDashboard/StocksCard/StocksCard.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReportDialog.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.css
+src old/components/CompaniesData/Tabs/CompanyImedReports/CompanyImedReports.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/DialogStore.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/FetchImedReports.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/OrganizeTableImedReports.js
+src old/components/CompaniesData/Tabs/CompanyImedReports/ShowIframe.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CompanyDetailsObject.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CompanyHeaderCard.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CompanyOverview.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CustomCardHeader.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CustomChart.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardHeader.js
+src old/components/CompaniesData/Tabs/CompanyOverview/CustomTableCardRow.js
+src old/components/CompaniesData/Tabs/CompanyOverview/StockChart_checkifneedtodelete.js
+src old/components/CompaniesData/Tabs/CompanyOverview/TableCard.css
+src old/components/CompaniesData/Tabs/CompanyOverview/TableCard.js
+src old/components/CompaniesData/Tabs/CompanyOverview/ChartCard/ChartCard.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard - Copy.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/AboutCard.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/AccordionLine.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsHeader.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/DetailsLine.js
+src old/components/CompaniesData/Tabs/CompanyOverview/Old/RegularCard.js
+src old/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.css
+src old/components/CompaniesData/Tabs/CompanyStockPrice/CompanyStockPrice.js
+src old/components/CompaniesData/Tabs/CompanyStockPrice/FetchStockPrice.js
+src old/components/CompaniesData/Tabs/CompanyStockPrice/OrganizeTableStockPrice.js
+src old/components/Home/Home.js
+src old/components/NavBar/LargeScreenMenu.js
+src old/components/NavBar/ListMenu.js
+src old/components/NavBar/ListMenuItemLink.js
+src old/components/NavBar/NavBar.js
+src old/components/NavBar/SmallScreenMenu.js
+src old/components/Router/RenderRoutes.js
+src old/components/Router/Routes.js
+src old/icons/FaxIcon.js

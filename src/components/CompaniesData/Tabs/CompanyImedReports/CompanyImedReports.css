@@ -1,0 +1,16 @@
+.companyImedReports {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.companyImedReports .MuiInputBase-root > input {
+  width: 80px;
+}
+
+/* .searchDatesMain,
+.searchDatesMain > div {
+  margin-top: 4px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+} */
