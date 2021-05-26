@@ -49,6 +49,7 @@ const organizeGraphsDataByClauses = (clausesByPeriods, clauses) => {
       organizedClausesData[clause.nameInXBRL].yData.push(
         Number(period.Data.getSpecificClauseObject(clause.nameInXBRL).value)
       );
+      organizedClausesData[clause.nameInXBRL].currency = period.Data.currency;
     });
   });
   return organizedClausesData;

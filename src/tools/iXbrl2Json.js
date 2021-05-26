@@ -75,6 +75,7 @@ export class IXBRL2JSON {
       }
     });
     const currentAsOf = FinStmtsObj["context"]["Current_AsOf"].instant._text;
+    const currency = FinStmtsObj["unit"]["U-Monetary"]._text;
     const year = new Date(currentAsOf).getFullYear();
     const quarter = (new Date(currentAsOf).getMonth() + 1) / 3;
     this.period = {
@@ -83,6 +84,7 @@ export class IXBRL2JSON {
       quarter: quarter,
       periodText: `Q${quarter}/${year}`,
     };
+    this.currency = currency.slice(-3);
     this.clauses = FinStmtsObj["ifrs-full"];
     this.generalInfo = FinStmtsObj["ifrs-il"];
   }
