@@ -5,7 +5,7 @@ export default class IsraeliCurrency {
     this.date = date; //20210331
     this.currency = currency;
     this.data = "";
-    // this._getCurrency();
+    this._getCurrency();
     // this._originalXML = {};
     // this._loadXML(xmlStr);
   }
@@ -33,7 +33,7 @@ export default class IsraeliCurrency {
     return date.replaceAll("-", "");
   }
 
-  async getCurrency() {
+  async _getCurrency() {
     let localFuncDate = this.date;
     let i = 0;
     do {
