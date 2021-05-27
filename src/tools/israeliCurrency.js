@@ -1,5 +1,4 @@
 import * as xmljs from "xml-js";
-import axios from "axios";
 
 export default class IsraeliCurrency {
   constructor(date, currency) {
