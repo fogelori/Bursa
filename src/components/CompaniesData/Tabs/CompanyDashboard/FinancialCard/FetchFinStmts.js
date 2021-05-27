@@ -149,8 +149,23 @@ const fetchXBRLsData = async (rowsXBRLList) => {
 };
 
 export function useFetchFinStmts() {
-  const [graphsDataByClauses, setGraphsDataByClauses] = useState([]);
+  const [finStmtsComparativeData, getStmtsComparative] =
+    useFetchFinStmtsComparative();
+  const [graphsDataByClauses, getFinStmtsXBRLs] = useFetchFinStmtsXBRLs();
+
   const getFinStmts = useCallback(
+    async (entityId, fromYear, toYear, period, clauses) => {
+      await getFinStmtsXBRLs(entityId, fromYear, toYear, period, clauses);
+      await getStmtsComparative(entityId);
+    },
+    []
+  );
+  return [finStmtsComparativeData, graphsDataByClauses, getFinStmts];
+}
+
+function useFetchFinStmtsXBRLs() {
+  const [graphsDataByClauses, setGraphsDataByClauses] = useState([]);
+  const getFinStmtsXBRLs = useCallback(
     async (entityId, fromYear, toYear, period = 6, clauses) => {
       const url = "https://mayaapi.tase.co.il/api/report/finance";
       const method = "POST";
@@ -179,7 +194,7 @@ export function useFetchFinStmts() {
     []
   );
 
-  return [graphsDataByClauses, getFinStmts];
+  return [graphsDataByClauses, getFinStmtsXBRLs];
 }
 
 // export default useFetchFinStmts;
@@ -218,12 +233,12 @@ const organizeFinStmtsData = (data) => {
   return organizedData;
 };
 
-export function useFetchFinStmtsComparative(companyId) {
+function useFetchFinStmtsComparative() {
   // const companyId = companyOverviewData.CompanyDetails.CompanyId;
   const [finStmtsComparative, setFinStmtsComparative] = useState([]);
 
-  const getStmtsComparative = async (securityId) => {
-    const url = `https://mayaapi.tase.co.il/api/company/financereports?companyId=${securityId}`;
+  const getStmtsComparative = async (companyId) => {
+    const url = `https://mayaapi.tase.co.il/api/company/financereports?companyId=${companyId}`;
     const method = "GET";
     const headers = {
       DNT: "1",
@@ -231,18 +246,19 @@ export function useFetchFinStmtsComparative(companyId) {
     };
     let data = await getFetchTase(url, method, headers);
     data = organizeFinStmtsData(data.AllRows);
-    return data;
+    // return data;
+    setFinStmtsComparative(data);
   };
 
-  useEffect(() => {
-    async function fetchStmtsComparative() {
-      const data = await getStmtsComparative(companyId);
-      setFinStmtsComparative(data);
-    }
-    fetchStmtsComparative();
-  }, [companyId]);
+  // useEffect(() => {
+  //   async function fetchStmtsComparative() {
+  //     const data = await getStmtsComparative(companyId);
+  //     setFinStmtsComparative(data);
+  //   }
+  //   fetchStmtsComparative();
+  // }, [companyId]);
 
-  return finStmtsComparative;
+  return [finStmtsComparative, getStmtsComparative];
 }
 
 // export default useFetchFinStmtsComparative;

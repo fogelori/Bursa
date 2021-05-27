@@ -8,8 +8,9 @@ import { useParams } from "react-router";
 
 function FinanceBodyCard(props) {
   const params = useParams();
-  const [graphsData, getGraphsDataByClauses] = useFetchFinStmts();
-  const finStmtsComparativeData = useFetchFinStmtsComparative(params.companyId);
+  const [finStmtsComparativeData, graphsData, getFinStmtsData] =
+    useFetchFinStmts();
+  // const finStmtsComparativeData = useFetchFinStmtsComparative(params.companyId);
   // console.log(finStmtsComparativeData);
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
@@ -22,14 +23,17 @@ function FinanceBodyCard(props) {
     []
   );
   useEffect(() => {
-    getGraphsDataByClauses(
-      params.companyId,
-      currentYear - 2,
-      currentYear,
-      6,
-      clauses
-    );
-  }, [params.companyId, currentYear, clauses, getGraphsDataByClauses]);
+    const execGetFinStmtsDataFunc = async () => {
+      await getFinStmtsData(
+        params.companyId,
+        currentYear - 2,
+        currentYear,
+        6,
+        clauses
+      );
+    };
+    execGetFinStmtsDataFunc();
+  }, [params.companyId, currentYear, clauses, getFinStmtsData]);
 
   const getGridItem = (clause) => {
     // const currPeriodValue =
