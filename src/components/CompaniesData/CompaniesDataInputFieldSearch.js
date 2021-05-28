@@ -10,7 +10,7 @@ function CompaniesDataInputFieldSearch() {
   let history = useHistory();
   const [companiesList, setCompaniesList] = useState([]);
   const [value, setValue] = useState(null);
-  const chosenCompany = useRef(null);
+  const chosenCompany = useRef({});
 
   const updateCompaniesList = () => {
     getCompaniesList().then((data) => {
