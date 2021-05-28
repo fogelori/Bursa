@@ -2,7 +2,6 @@ import React, { useEffect, useMemo } from "react";
 import Grid from "@material-ui/core/Grid";
 import FinanceItem from "./FinanceItem";
 import { useFetchFinStmts } from "./FetchFinStmts";
-import { useFetchFinStmtsComparative } from "./FetchFinStmts";
 import CustomChartBar from "./CustomChartBar";
 import { useParams } from "react-router";
 
@@ -10,8 +9,6 @@ function FinanceBodyCard(props) {
   const params = useParams();
   const [finStmtsComparativeData, graphsData, getFinStmtsData] =
     useFetchFinStmts();
-  // const finStmtsComparativeData = useFetchFinStmtsComparative(params.companyId);
-  // console.log(finStmtsComparativeData);
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
   const clauses = useMemo(
