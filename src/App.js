@@ -25,7 +25,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <StateHideHeaderProvider>
         <div className="App" dir={local}>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <NavBar />
             <div className={classes.body}>
               <Routes />
