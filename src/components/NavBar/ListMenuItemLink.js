@@ -7,11 +7,13 @@ import { Link as RouterLink } from "react-router-dom";
 function ListMenuItemLink(props) {
   //took from https://material-ui.com/guides/composition/
   const { icon, primary, to } = props;
+  let { path } = useRouteMatch();
+  path = path === "/" ? "" : path + "/";
 
   const renderLink = React.useMemo(
     () =>
       React.forwardRef((itemProps, ref) => (
-        <RouterLink to={to} ref={ref} {...itemProps} />
+        <RouterLink to={`${path}${to}`} ref={ref} {...itemProps} />
       )),
     [to]
   );
