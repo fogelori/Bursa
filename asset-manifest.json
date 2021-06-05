@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Bursa/static/css/main.e1eaea5d.chunk.css",
-    "main.js": "/Bursa/static/js/main.2890c264.chunk.js",
-    "main.js.map": "/Bursa/static/js/main.2890c264.chunk.js.map",
+    "main.js": "/Bursa/static/js/main.d3f0d2cb.chunk.js",
+    "main.js.map": "/Bursa/static/js/main.d3f0d2cb.chunk.js.map",
     "runtime-main.js": "/Bursa/static/js/runtime-main.5db06ff5.js",
     "runtime-main.js.map": "/Bursa/static/js/runtime-main.5db06ff5.js.map",
     "static/css/2.847a128f.chunk.css": "/Bursa/static/css/2.847a128f.chunk.css",
-    "static/js/2.74e8d297.chunk.js": "/Bursa/static/js/2.74e8d297.chunk.js",
-    "static/js/2.74e8d297.chunk.js.map": "/Bursa/static/js/2.74e8d297.chunk.js.map",
+    "static/js/2.76f213d9.chunk.js": "/Bursa/static/js/2.76f213d9.chunk.js",
+    "static/js/2.76f213d9.chunk.js.map": "/Bursa/static/js/2.76f213d9.chunk.js.map",
     "static/js/3.b733f6a2.chunk.js": "/Bursa/static/js/3.b733f6a2.chunk.js",
     "static/js/3.b733f6a2.chunk.js.map": "/Bursa/static/js/3.b733f6a2.chunk.js.map",
     "index.html": "/Bursa/index.html",
     "static/css/2.847a128f.chunk.css.map": "/Bursa/static/css/2.847a128f.chunk.css.map",
     "static/css/main.e1eaea5d.chunk.css.map": "/Bursa/static/css/main.e1eaea5d.chunk.css.map",
-    "static/js/2.74e8d297.chunk.js.LICENSE.txt": "/Bursa/static/js/2.74e8d297.chunk.js.LICENSE.txt"
+    "static/js/2.76f213d9.chunk.js.LICENSE.txt": "/Bursa/static/js/2.76f213d9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5db06ff5.js",
     "static/css/2.847a128f.chunk.css",
-    "static/js/2.74e8d297.chunk.js",
+    "static/js/2.76f213d9.chunk.js",
     "static/css/main.e1eaea5d.chunk.css",
-    "static/js/main.2890c264.chunk.js"
+    "static/js/main.d3f0d2cb.chunk.js"
   ]
 }
