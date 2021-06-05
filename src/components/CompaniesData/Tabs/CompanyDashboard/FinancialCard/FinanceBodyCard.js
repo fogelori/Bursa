@@ -35,8 +35,13 @@ function FinanceBodyCard(props) {
   const getGridItem = (clause) => {
     // const currPeriodValue =
     //   finStmtsComparativeData[clause.nameInXBRL]?.CurrPeriodValue / 1000;
-    const { CurrPeriodValue, Change } =
-      finStmtsComparativeData[clause.nameInXBRL] || {};
+    let { currentValue, change, currencySymbol } =
+      graphsData[clause.nameInXBRL] || {};
+    if (!currentValue) {
+      currentValue =
+        finStmtsComparativeData[clause.nameInXBRL]?.CurrPeriodValue;
+      change = finStmtsComparativeData[clause.nameInXBRL]?.Change;
+    }
     return (
       <Grid
         container
@@ -54,8 +59,9 @@ function FinanceBodyCard(props) {
       >
         <FinanceItem
           name={clause.name}
-          amount={CurrPeriodValue}
-          change={Change}
+          amount={currentValue}
+          change={change}
+          currencySymbol={currencySymbol}
         />
         <CustomChartBar chartData={graphsData[clause.nameInXBRL]} />
         {/* <Divider orientation="vertical" flexItem /> */}

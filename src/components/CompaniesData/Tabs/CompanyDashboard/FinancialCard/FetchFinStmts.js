@@ -2,6 +2,24 @@ import { useCallback, useEffect, useState } from "react";
 import { getFetchTase } from "../../../FetchFunctions";
 import { IXBRL2JSON } from "../../../../../tools/iXbrl2Json";
 
+const currency_symbols = {
+  USD: "$", // US Dollar
+  EUR: "€", // Euro
+  CRC: "₡", // Costa Rican Colón
+  GBP: "£", // British Pound Sterling
+  ILS: "₪", // Israeli New Sheqel
+  INR: "₹", // Indian Rupee
+  JPY: "¥", // Japanese Yen
+  KRW: "₩", // South Korean Won
+  NGN: "₦", // Nigerian Naira
+  PHP: "₱", // Philippine Peso
+  PLN: "zł", // Polish Zloty
+  PYG: "₲", // Paraguayan Guarani
+  THB: "฿", // Thai Baht
+  UAH: "₴", // Ukrainian Hryvnia
+  VND: "₫", // Vietnamese Dong
+};
+
 const organizeGraphsDataByClauses = (clausesByPeriods, clauses) => {
   const isFourthQuarter = (period) => {
     return period.Data.period.quarter === 4;
@@ -9,6 +27,36 @@ const organizeGraphsDataByClauses = (clausesByPeriods, clauses) => {
 
   const isPnLClause = (period, clause) => {
     return period.Data.clauses[clause].date.name === "Current_ForPeriod";
+  };
+
+  const setComparativeData = (organizedClausesData) => {
+    let lastxDataItem;
+    let previousPeriodxDataItem;
+    let previousPeriodIndex;
+    let currentValue;
+    let previousValue;
+    let change;
+    clauses.forEach((clause) => {
+      lastxDataItem =
+        organizedClausesData[clause.nameInXBRL].xData.slice(-1)[0];
+      previousPeriodxDataItem = `${lastxDataItem.slice(0, 2)}/${
+        lastxDataItem.slice(-4) - 1
+      }`;
+      previousPeriodIndex = organizedClausesData[
+        clause.nameInXBRL
+      ].xData.findIndex((item) => item === previousPeriodxDataItem);
+      currentValue =
+        organizedClausesData[clause.nameInXBRL].yData.slice(-1)[0] / 1000000;
+      previousValue =
+        organizedClausesData[clause.nameInXBRL].yData[previousPeriodIndex] /
+        1000000;
+      change = ((currentValue / previousValue - 1) * 100).toFixed(1);
+      organizedClausesData[clause.nameInXBRL].previousValue = previousValue;
+      organizedClausesData[clause.nameInXBRL].currentValue = currentValue;
+      organizedClausesData[clause.nameInXBRL].change = change;
+      organizedClausesData[clause.nameInXBRL].currencySymbol =
+        currency_symbols[organizedClausesData[clause.nameInXBRL].currency];
+    });
   };
 
   const organizedClausesData = {};
@@ -35,23 +83,24 @@ const organizeGraphsDataByClauses = (clausesByPeriods, clauses) => {
           xData: [],
           yData: [],
         }).xData.push(period.Data.period.periodText);
-      if (isPnLClause(period, clause.nameInXBRL)) {
-        if (!isFourthQuarter(period)) {
-          accuredQuartersAmount += Number(
-            period.Data.getSpecificClauseObject(clause.nameInXBRL).value
-          );
-        } else {
-          period.Data["clauses"][clause.nameInXBRL].value -=
-            accuredQuartersAmount;
-          accuredQuartersAmount = 0;
-        }
-      }
+      // if (isPnLClause(period, clause.nameInXBRL)) {
+      //   if (!isFourthQuarter(period)) {
+      //     accuredQuartersAmount += Number(
+      //       period.Data.getSpecificClauseObject(clause.nameInXBRL).value
+      //     );
+      //   } else {
+      //     period.Data["clauses"][clause.nameInXBRL].value -=
+      //       accuredQuartersAmount;
+      //     accuredQuartersAmount = 0;
+      //   }
+      // }
       organizedClausesData[clause.nameInXBRL].yData.push(
         Number(period.Data.getSpecificClauseObject(clause.nameInXBRL).value)
       );
       organizedClausesData[clause.nameInXBRL].currency = period.Data.currency;
     });
   });
+  setComparativeData(organizedClausesData);
   return organizedClausesData;
 };
 
@@ -115,7 +164,7 @@ const organizeXBRLList = (rows) => {
       foundSamePeriod = false;
     }
   });
-  return newList;
+  return newList.slice(-8);
 };
 
 const fetchXBRLsData = async (rowsXBRLList) => {
@@ -185,11 +234,15 @@ function useFetchFinStmtsXBRLs() {
       const data = await getFetchTase(url, method, headers, bodyString);
       let rowsXBRLList = organizeXBRLList(data.FinanceCompanyReportByPeriod);
       rowsXBRLList = await fetchXBRLsData(rowsXBRLList);
-      const clausesGraphsData = organizeGraphsDataByClauses(
-        rowsXBRLList,
-        clauses
-      );
-      setGraphsDataByClauses(clausesGraphsData);
+      if (Object.keys(rowsXBRLList).length !== 0) {
+        const clausesGraphsData = organizeGraphsDataByClauses(
+          rowsXBRLList,
+          clauses
+        );
+        setGraphsDataByClauses(clausesGraphsData);
+      } else {
+        setGraphsDataByClauses({ xData: [], yData: [] });
+      }
     },
     []
   );

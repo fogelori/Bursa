@@ -139,7 +139,7 @@ function CustomChartBar(props) {
             const valueCommas = value
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            return `${valueCommas} ${props.chartData?.currency}`;
+            return `${valueCommas}`;
           },
         },
         marker: {

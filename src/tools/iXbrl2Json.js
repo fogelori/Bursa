@@ -81,8 +81,15 @@ export class IXBRL2JSON {
     this.period = {
       currentAsOf: currentAsOf,
       year: year,
-      quarter: quarter,
-      periodText: `Q${quarter}/${year}`,
+      ...(quarter !== 4
+        ? {
+            quarter: quarter,
+            periodText: `Q${quarter}/${year}`,
+          }
+        : {
+            quarter: quarter,
+            periodText: `FY/${year}`,
+          }),
     };
     this.currency = currency.slice(-3);
     this.clauses = FinStmtsObj["ifrs-full"];

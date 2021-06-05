@@ -13,7 +13,7 @@ function FinanceItem(props) {
         {props.name}
       </Typography>
       {props.amount && (
-        <Typography variant="h4" component="h4">
+        <Typography variant="h5" component="h5">
           <CountUp
             start={0}
             end={props.amount}
@@ -23,7 +23,7 @@ function FinanceItem(props) {
             decimals={1}
             decimal="."
           />
-          M
+          M {props.currencySymbol}
         </Typography>
       )}
       {props.change && (
