@@ -1,0 +1,92 @@
+{
+    "navBar": {
+        "home": {
+            "title": "בית"
+        },
+        "companiesData": {
+            "title": "מידע חברות",
+            "searchCompany": "בחירת חברה",
+            "components": {
+                "searchDates": {
+                    "startDate": "תאריך התחלה",
+                    "endDate": "תאריך סיום"
+                },
+                "createTable": {
+                    "toolbarColumns": "עמודות",
+                    "columnsPanelTextFieldLabel": "מצא עמודה",
+                    "columnsPanelTextFieldPlaceholder": "כותרת עמודה",
+                    "columnsPanelShowAllButton": "הצג הכל",
+                    "columnsPanelHideAllButton": "הסתר הכל",
+                    "toolbarFilters": "סינון",
+                    "filterPanelInputPlaceholder": "ערך סינון",
+                    "filterPanelOperators": "אופרטורים",
+                    "filterPanelColumns": "עמודות",
+                    "filterPanelInputLabel": "ערך",
+                    "filterOperatorContains": "מכיל",
+                    "filterOperatorEquals": "שווה ל",
+                    "filterOperatorStartsWith": "מתחיל ב",
+                    "filterOperatorEndsWith": "מסתיים ב",
+                    "filterOperatorIs": "הוא",
+                    "filterOperatorNot": "הוא לא",
+                    "filterOperatorAfter": "הוא אחרי",
+                    "filterOperatorOnOrAfter": "הוא שווה או אחרי",
+                    "filterOperatorBefore": "הוא לפני",
+                    "filterOperatorOnOrBefore": "הוא שווה או לפני",
+                    "toolbarExport": "ייצוא",
+                    "toolbarExportCSV": "הורד כ-CSV"
+                }
+            },
+            "tabs": {
+                "dashboard": {
+                    "title": "דשבורד",
+                    "financialReports": {
+                        "title": "נתונים כספיים",
+                        "changeDescription": "בתקופה האחרונה",
+                        "clausesNames": ["הכנסות", "רווח", "הון"]
+                    },
+                    "immediateReports": {
+                        "title": "דיווחים מיידיים"
+                    },
+                    "securities": {
+                        "title": "ניירות ערך",
+                        "changeDescription": "בשנה האחרונה"
+                    }
+                },
+                "overview": {
+                    "title": "סקירה כללית",
+                    "cards": {
+                        "about": {
+                            "title" : "אודות",
+                            "issuerNo" : "מספר מנפיק",
+                            "corporateNo" : "מספר תאגיד:",
+                            "incorporation" : "מקום התאגדות:",
+                            "phone" : "טלפון:",
+                            "fax" : "פקס:",
+                            "eMail" : "דוא'ל:",
+                            "website" : "אתר:"
+                        },
+                        "securities": {
+                            "title": "ניירות ערך"
+                        },
+                        "parties": {
+                            "title": "צדדים קשורים",
+                            "tableHeaders": ["שם", "שם נייר ערך"]
+                        },
+                        "boardManagement": {
+                            "title": "הנהלה ונושאי משרה"
+                        }
+                    }
+                },
+                "immediateReports": {
+                    "title": "דיווחים מיידיים",
+                    "tableHeaders": ["תאריך", "נושא"]
+                },
+                "stockPrice": {
+                    "title": "מחירי מניות",
+                    "chooseStock": "בחירת נייר ערך",
+                    "tableHeaders": ["תאריך", "מחיר סגירה", "מחיר בסיס", "מחיר פתיחה", "מחיר גבוה", "מחיר נמוך"]
+                }
+            }
+        }
+    }
+}
