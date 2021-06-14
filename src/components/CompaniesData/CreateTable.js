@@ -29,7 +29,7 @@ function CustomToolbar() {
 }
 
 function CreateTable(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.components.createTable", {
     returnObjects: true,
   });

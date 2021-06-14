@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 // import StockPage from "./Stock/StockPage";
 
 export const useGetMenuList = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar", {
     returnObjects: true,
   });

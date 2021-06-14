@@ -12,7 +12,10 @@ import { useTranslation } from "react-i18next";
 
 function CompanyTabs(props) {
   const theme = useTheme();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs", {
+    returnObjects: true,
+  });
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [companyOverviewData, setCompanyOverviewData] = useState();
   let params = useParams();
@@ -20,7 +23,7 @@ function CompanyTabs(props) {
   const tabsList = React.useMemo(
     () => [
       {
-        label: t("navBar.companiesData.tabs.dashboard.title"),
+        label: translationObj.dashboard.title,
         routeName: "dashboard",
         Component: CompanyDashboard,
         propsArgs: {
@@ -28,7 +31,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: t("navBar.companiesData.tabs.overview.title"),
+        label: translationObj.overview.title,
         routeName: "overview",
         Component: CompanyOverview,
         propsArgs: {
@@ -36,7 +39,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: t("navBar.companiesData.tabs.immediateReports.title"),
+        label: translationObj.immediateReports.title,
         routeName: "immedreports",
         Component: CompanyImedReports,
         propsArgs: {
@@ -44,7 +47,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: t("navBar.companiesData.tabs.stockPrice.title"),
+        label: translationObj.stockPrice.title,
         routeName: "stockprice",
         Component: CompanyStockPrice,
         propsArgs: {
@@ -59,7 +62,7 @@ function CompanyTabs(props) {
     fetchCompanyOverview(params.companyId).then((data) =>
       setCompanyOverviewData(data)
     );
-  }, [params.companyId]);
+  }, [params.companyId, t]);
 
   console.log("CompanyTabs Rendered");
 

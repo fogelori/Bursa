@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export const useCreateColumns = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.tabs.stockPrice", {
     returnObjects: true,
   });

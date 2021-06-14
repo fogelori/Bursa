@@ -8,7 +8,10 @@ import { useTranslation } from "react-i18next";
 
 function FinanceBodyCard(props) {
   const params = useParams();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.dashboard", {
+    returnObjects: true,
+  });
   const [finStmtsComparativeData, graphsData, getFinStmtsData] =
     useFetchFinStmts();
 
@@ -16,24 +19,15 @@ function FinanceBodyCard(props) {
   const clauses = useMemo(
     () => [
       {
-        name: t(
-          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
-          { returnObjects: true }
-        )[0],
+        name: translationObj.financialReports.clausesNames[0],
         nameInXBRL: "Revenue",
       },
       {
-        name: t(
-          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
-          { returnObjects: true }
-        )[1],
+        name: translationObj.financialReports.clausesNames[1],
         nameInXBRL: "ProfitLoss",
       },
       {
-        name: t(
-          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
-          { returnObjects: true }
-        )[2],
+        name: translationObj.financialReports.clausesNames[2],
         nameInXBRL: "Equity",
       },
     ],

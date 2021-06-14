@@ -8,7 +8,7 @@ import FaxIcon from "../../../../icons/FaxIcon";
 import { useTranslation } from "react-i18next";
 
 export function useGetDetailsObject(companyOverviewData) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.tabs.overview.cards", {
     returnObjects: true,
   });

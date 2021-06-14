@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 function CompanyStockPrice(props) {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.tabs.stockPrice", {
     returnObjects: true,
   });

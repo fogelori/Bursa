@@ -28,7 +28,7 @@ function ListItemLanguage() {
 
   const handleChangeLng = (event) => {
     i18next.changeLanguage(event.target.value);
-    window.location.reload();
+    // window.location.reload();
     // setLanguage(event.target.value);
   };
 

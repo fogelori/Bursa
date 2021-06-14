@@ -4,7 +4,10 @@ import TableCard from "../../CompanyOverview/TableCard";
 import { useTranslation } from "react-i18next";
 
 function StocksCard(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.dashboard", {
+    returnObjects: true,
+  });
   const [companyStockPricesRows, fetchCompanyStockPrice] =
     useFetchSecuritiesPrices(props.companyOverviewData);
 
@@ -27,11 +30,12 @@ function StocksCard(props) {
     dateObject.endDate,
     props.companyOverviewData,
     fetchCompanyStockPrice,
+    t,
   ]);
 
   const securitiesObject = {
     cardHeader: {
-      headerText: t("navBar.companiesData.tabs.dashboard.securities.title"),
+      headerText: translationObj.securities.title,
       // subheaderText: "try",
     },
     // tableHeader: ["Name"],

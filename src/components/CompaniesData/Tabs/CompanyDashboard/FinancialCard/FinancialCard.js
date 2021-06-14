@@ -7,9 +7,12 @@ import FinanceBodyCard from "./FinanceBodyCard";
 import { useTranslation } from "react-i18next";
 
 function FinancialCard(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.dashboard", {
+    returnObjects: true,
+  });
   const headerObject = {
-    headerText: t("navBar.companiesData.tabs.dashboard.financialReports.title"),
+    headerText: translationObj.financialReports.title,
   };
 
   console.log("FinancialCard Rendered");

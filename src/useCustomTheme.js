@@ -5,7 +5,7 @@ import i18next from "i18next";
 import { heIL, enUS } from "@material-ui/core/locale";
 
 function useCustomTheme() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [local, setLocal] = useState({
     direction: "ltr",
     shortName: enUS,
@@ -13,7 +13,7 @@ function useCustomTheme() {
   // let localproperty;
 
   useEffect(() => {
-    if (i18next.language == "he-IL") {
+    if (i18next.language === "he-IL") {
       setLocal((prevState) => ({
         ...prevState,
         direction: "rtl",

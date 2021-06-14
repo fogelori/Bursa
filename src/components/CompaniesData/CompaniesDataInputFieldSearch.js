@@ -9,7 +9,10 @@ import { useTranslation } from "react-i18next";
 function CompaniesDataInputFieldSearch() {
   let { path } = useRouteMatch();
   let history = useHistory();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar", {
+    returnObjects: true,
+  });
   const [companiesList, setCompaniesList] = useState([]);
   const [value, setValue] = useState(null);
   const chosenCompany = useRef({});
@@ -38,7 +41,7 @@ function CompaniesDataInputFieldSearch() {
   return (
     <React.Fragment>
       <InputField
-        label={t("navBar.companiesData.searchCompany")}
+        label={translationObj.companiesData.searchCompany}
         list={companiesList}
         propertyName="Name"
         setState={setValue}

@@ -23,7 +23,7 @@ export const useCreateColumns = (simpleTable) => {
   // let { url } = useRouteMatch();
   const [open, setOpen] = useState(false);
   const [chosenId, setChosenId] = useState();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.tabs.immediateReports", {
     returnObjects: true,
   });

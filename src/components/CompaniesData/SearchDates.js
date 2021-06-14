@@ -11,7 +11,7 @@ import "./SearchDates.css";
 import { useTranslation } from "react-i18next";
 
 function SearchDates({ dateObject, onChangeDate, onClickButton }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const translationObj = t("navBar.companiesData.components.searchDates", {
     returnObjects: true,
   });

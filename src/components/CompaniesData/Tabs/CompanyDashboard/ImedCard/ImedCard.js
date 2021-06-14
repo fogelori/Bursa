@@ -33,12 +33,15 @@ const useStyles = makeStyles((theme) => ({
 
 function ImedCard(props) {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.dashboard", {
+    returnObjects: true,
+  });
   const [companyImedReports, fetchCompanyImedReports] = useFetchImedReports();
   const simpleTable = true;
   const columns = useCreateColumns(simpleTable);
   const headerObject = {
-    headerText: t("navBar.companiesData.tabs.dashboard.immediateReports.title"),
+    headerText: translationObj.immediateReports.title,
   };
 
   useEffect(() => {
@@ -51,7 +54,7 @@ function ImedCard(props) {
       undefined,
       itemsOnPage
     );
-  }, [props.companyOverviewData, fetchCompanyImedReports]);
+  }, [props.companyOverviewData, fetchCompanyImedReports, t]);
 
   // const imedReportsObject = {
   //   cardHeader: {

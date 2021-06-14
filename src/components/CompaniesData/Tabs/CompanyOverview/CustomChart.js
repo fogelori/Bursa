@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 function CustomChart(props) {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const percentChange =
     (props.chartData.yData[0] /
       props.chartData.yData[props.chartData.yData.length - 1] -

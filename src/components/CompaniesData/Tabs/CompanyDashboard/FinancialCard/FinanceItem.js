@@ -6,8 +6,10 @@ import AutoTrendingIconDirection from "../../../../../icons/AutoTrendingIconDire
 import { useTranslation } from "react-i18next";
 
 function FinanceItem(props) {
-  const { t, i18n } = useTranslation();
-
+  const { t } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.dashboard", {
+    returnObjects: true,
+  });
   console.log("FinanceItem Rendered");
 
   return (
@@ -32,10 +34,7 @@ function FinanceItem(props) {
       {props.change && (
         <Typography variant="body2" component="p">
           <AutoTrendingIconDirection number={props.change} />
-          {props.change}%{" "}
-          {t(
-            "navBar.companiesData.tabs.dashboard.financialReports.changeDescription"
-          )}
+          {props.change}% {translationObj.financialReports.changeDescription}
         </Typography>
       )}
     </Box>
