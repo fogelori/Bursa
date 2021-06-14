@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo } from "react";
 import useFetchSecuritiesPrices from "./OrganizeData";
 import TableCard from "../../CompanyOverview/TableCard";
+import { useTranslation } from "react-i18next";
 
 function StocksCard(props) {
+  const { t, i18n } = useTranslation();
   const [companyStockPricesRows, fetchCompanyStockPrice] =
     useFetchSecuritiesPrices(props.companyOverviewData);
 
@@ -29,7 +31,7 @@ function StocksCard(props) {
 
   const securitiesObject = {
     cardHeader: {
-      headerText: "Securities",
+      headerText: t("navBar.companiesData.tabs.dashboard.securities.title"),
       // subheaderText: "try",
     },
     // tableHeader: ["Name"],

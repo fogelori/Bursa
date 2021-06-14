@@ -1,0 +1,93 @@
+{
+    "ori": "ori2sss",
+    "navBar": {
+        "home": {
+            "title": "Home"
+        },
+        "companiesData": {
+            "title": "Companies Data",
+            "searchCompany": "Choose a company",
+            "components": {
+                "searchDates": {
+                    "startDate": "Start date",
+                    "endDate": "End date"
+                },
+                "createTable": {
+                    "toolbarColumns": "Columns",
+                    "columnsPanelTextFieldLabel": "Find column",
+                    "columnsPanelTextFieldPlaceholder": "Column title",
+                    "columnsPanelShowAllButton": "Show all",
+                    "columnsPanelHideAllButton": "Hide all",
+                    "toolbarFilters": "Filters",
+                    "filterPanelInputPlaceholder": "Filter value",
+                    "filterPanelOperators": "Operators",
+                    "filterPanelColumns": "Columns",
+                    "filterPanelInputLabel": "Value",
+                    "filterOperatorContains": "contains",
+                    "filterOperatorEquals": "equals",
+                    "filterOperatorStartsWith": "starts with",
+                    "filterOperatorEndsWith": "ends with",
+                    "filterOperatorIs": "is",
+                    "filterOperatorNot": "is not",
+                    "filterOperatorAfter": "is after",
+                    "filterOperatorOnOrAfter": "is on or after",
+                    "filterOperatorBefore": "is before",
+                    "filterOperatorOnOrBefore": "is on or before",
+                    "toolbarExport": "Export",
+                    "toolbarExportCSV": "Download as CSV"
+                }
+            },
+            "tabs": {
+                "dashboard": {
+                    "title": "Dashboard",
+                    "financialReports": {
+                        "title": "Financial Reports",
+                        "changeDescription": "in last period",
+                        "clausesNames": ["Revenue", "Profit", "Equity"]
+                    },
+                    "immediateReports": {
+                        "title": "Immediate Reports"
+                    },
+                    "securities": {
+                        "title": "Securities",
+                        "changeDescription": "Last Year"
+                    }
+                },
+                "overview": {
+                    "title": "Overview",
+                    "cards": {
+                        "about": {
+                            "title" : "About",
+                            "issuerNo" : "Issuer No.",
+                            "corporateNo" : "Corporate No:",
+                            "incorporation" : "Incorporation:",
+                            "phone" : "Phone:",
+                            "fax" : "Fax:",
+                            "eMail" : "E-Mail:",
+                            "website" : "Website:"
+                        },
+                        "securities": {
+                            "title": "Securities"
+                        },
+                        "parties": {
+                            "title": "Parties",
+                            "tableHeaders": ["Name", "Security Name"]
+                        },
+                        "boardManagement": {
+                            "title": "Board & Management"
+                        }
+                    }
+                },
+                "immediateReports": {
+                    "title": "Immediate Reports",
+                    "tableHeaders": ["Date", "Subject"]
+                },
+                "stockPrice": {
+                    "title": "Stock Price",
+                    "chooseStock": "Choose a stock",
+                    "tableHeaders": ["Date", "Closing Price", "Base Price", "Open Price", "High Price", "Low Price"]
+                }
+            }
+        }
+    }
+}

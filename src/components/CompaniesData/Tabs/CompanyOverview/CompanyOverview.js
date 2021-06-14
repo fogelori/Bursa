@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import TableCard from "./TableCard";
 import CompanyHeaderCard from "./CompanyHeaderCard";
-import { getDetailsObject } from "./CompanyDetailsObject";
+import { useGetDetailsObject } from "./CompanyDetailsObject";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -67,7 +67,7 @@ function GridItemDetails({ companyOverviewData }) {
 
 function CompanyOverview(props) {
   const classes = useStyles();
-  const companyOverviewData = getDetailsObject(props.companyOverviewData);
+  const companyOverviewData = useGetDetailsObject(props.companyOverviewData);
 
   console.log("CompanyOverview Rendered");
 

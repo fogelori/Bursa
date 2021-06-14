@@ -4,20 +4,40 @@ import FinanceItem from "./FinanceItem";
 import { useFetchFinStmts } from "./FetchFinStmts";
 import CustomChartBar from "./CustomChartBar";
 import { useParams } from "react-router";
+import { useTranslation } from "react-i18next";
 
 function FinanceBodyCard(props) {
   const params = useParams();
+  const { t, i18n } = useTranslation();
   const [finStmtsComparativeData, graphsData, getFinStmtsData] =
     useFetchFinStmts();
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
   const clauses = useMemo(
     () => [
-      { name: "Revenue", nameInXBRL: "Revenue" },
-      { name: "Profit", nameInXBRL: "ProfitLoss" },
-      { name: "Equity", nameInXBRL: "Equity" },
+      {
+        name: t(
+          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
+          { returnObjects: true }
+        )[0],
+        nameInXBRL: "Revenue",
+      },
+      {
+        name: t(
+          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
+          { returnObjects: true }
+        )[1],
+        nameInXBRL: "ProfitLoss",
+      },
+      {
+        name: t(
+          "navBar.companiesData.tabs.dashboard.financialReports.clausesNames",
+          { returnObjects: true }
+        )[2],
+        nameInXBRL: "Equity",
+      },
     ],
-    []
+    [t]
   );
   useEffect(() => {
     const execGetFinStmtsDataFunc = async () => {

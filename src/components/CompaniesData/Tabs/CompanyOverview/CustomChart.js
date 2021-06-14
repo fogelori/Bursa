@@ -12,6 +12,7 @@ import Chart from "react-apexcharts";
 import CountUp from "react-countup";
 import Box from "@material-ui/core/Box";
 import AutoTrendingIconDirection from "../../../../icons/AutoTrendingIconDirection";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 function CustomChart(props) {
   const classes = useStyles();
+  const { t, i18n } = useTranslation();
   const percentChange =
     (props.chartData.yData[0] /
       props.chartData.yData[props.chartData.yData.length - 1] -
@@ -165,7 +167,9 @@ function CustomChart(props) {
           </Typography>
         </div>
         <Typography variant="body2" component="p" align="center">
-          Last Year
+          {t(
+            "navBar.companiesData.tabs.dashboard.securities.changeDescription"
+          )}
         </Typography>
       </div>
     </Box>

@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import Card from "@material-ui/core/Card";
 import CustomCardHeader from "../../CompanyOverview/CustomCardHeader";
 import CreateTable from "../../../CreateTable";
+import { useTranslation } from "react-i18next";
 
 // const securitiesObject = {
 //   cardHeader: {
@@ -32,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
 
 function ImedCard(props) {
   const classes = useStyles();
+  const { t, i18n } = useTranslation();
   const [companyImedReports, fetchCompanyImedReports] = useFetchImedReports();
   const simpleTable = true;
   const columns = useCreateColumns(simpleTable);
   const headerObject = {
-    headerText: "Immediate Reports",
+    headerText: t("navBar.companiesData.tabs.dashboard.immediateReports.title"),
   };
 
   useEffect(() => {

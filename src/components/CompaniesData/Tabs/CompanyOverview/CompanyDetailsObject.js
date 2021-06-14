@@ -5,12 +5,18 @@ import LanguageIcon from "@material-ui/icons/Language";
 import BusinessIcon from "@material-ui/icons/Business";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import FaxIcon from "../../../../icons/FaxIcon";
+import { useTranslation } from "react-i18next";
 
-export function getDetailsObject(companyOverviewData) {
+export function useGetDetailsObject(companyOverviewData) {
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.overview.cards", {
+    returnObjects: true,
+  });
+
   const detailsObject = {
     aboutObject: {
       cardHeader: {
-        headerText: "About",
+        headerText: translationObj.about.title,
         // subheaderText: props.companyOverviewData.CompanyDetails.Description,
         // logo: `https://www.tase.co.il/logos/company/en/${props.companyOverviewData.CompanyDetails.TaseEngLogo}`,
       },
@@ -18,37 +24,37 @@ export function getDetailsObject(companyOverviewData) {
       // tableRows: companyOverviewData.ShareHolders.ShareHoldersList,
       tableRows: [
         {
-          name: "Issuer No.",
+          name: translationObj.about.issuerNo,
           value: companyOverviewData.CompanyDetails.CompanyId,
           iconComponent: <BusinessCenterIcon />,
         },
         {
-          name: "Corporate No:",
+          name: translationObj.about.corporateNo,
           value: companyOverviewData.CompanyDetails.CorporateNo,
           iconComponent: <BusinessIcon />,
         },
         {
-          name: "Incorporation:",
+          name: translationObj.about.incorporation,
           value: companyOverviewData.CompanyDetails.IncorporationPlace,
           iconComponent: <PublicIcon />,
         },
         {
-          name: "Phone:",
+          name: translationObj.about.phone,
           value: companyOverviewData.CompanyDetails.Tel,
           iconComponent: <PhoneIcon />,
         },
         {
-          name: "Fax:",
+          name: translationObj.about.fax,
           value: companyOverviewData.CompanyDetails.Fax,
           iconComponent: <FaxIcon />,
         },
         {
-          name: "E-Mail:",
+          name: translationObj.about.eMail,
           value: companyOverviewData.CompanyDetails.Email,
           iconComponent: <EmailIcon />,
         },
         {
-          name: "Website:",
+          name: translationObj.about.website,
           value: companyOverviewData.CompanyDetails.Site,
           iconComponent: <LanguageIcon />,
         },
@@ -64,7 +70,7 @@ export function getDetailsObject(companyOverviewData) {
 
     securitiesObject: {
       cardHeader: {
-        headerText: "Securities",
+        headerText: translationObj.securities.title,
         // subheaderText: "try",
       },
       // tableHeader: ["Name"],
@@ -80,9 +86,9 @@ export function getDetailsObject(companyOverviewData) {
 
     partiesObject: {
       cardHeader: {
-        headerText: "Parties",
+        headerText: translationObj.parties.title,
       },
-      tableHeader: ["Name", "Security Name"],
+      tableHeader: translationObj.parties.tableHeaders,
       tableRows: companyOverviewData.ShareHolders.ShareHoldersList,
       selectedProperties: [
         {
@@ -98,7 +104,7 @@ export function getDetailsObject(companyOverviewData) {
 
     managementObject: {
       cardHeader: {
-        headerText: "Board & Management",
+        headerText: translationObj.boardManagement.title,
       },
       // tableHeader: ["Name"],
       tableRows:

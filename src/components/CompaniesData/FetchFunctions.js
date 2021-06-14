@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 export const getFetchTase = async (url, method, headers, bodyObject) => {
   try {
     const response = await fetch(url, {
@@ -6,7 +8,7 @@ export const getFetchTase = async (url, method, headers, bodyObject) => {
       headers: {
         Accept: "application/json, text/plain, */*",
         "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "he-IL",
+        "Accept-Language": i18next.language,
         // "Accept-Language": "en-US",
         "User-Agent":
           "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0",
@@ -43,7 +45,8 @@ export const getFetchTase = async (url, method, headers, bodyObject) => {
 };
 
 export const getCompaniesList = async () => {
-  const url = "https://api.tase.co.il/api/content/searchentities?lang=0";
+  const lang = i18next.language === "he-IL" ? 0 : 1;
+  const url = `https://api.tase.co.il/api/content/searchentities?lang=${lang}`;
   const method = "GET";
   const data = await getFetchTase(url, method);
   const filteredList = data.filter(

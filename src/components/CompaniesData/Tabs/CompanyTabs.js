@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import CompanyOverview from "./CompanyOverview/CompanyOverview";
 import CompanyImedReports from "./CompanyImedReports/CompanyImedReports";
 import CompanyStockPrice from "./CompanyStockPrice/CompanyStockPrice";
@@ -8,9 +8,11 @@ import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { fetchCompanyOverview } from "../FetchFunctions";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function CompanyTabs(props) {
   const theme = useTheme();
+  const { t, i18n } = useTranslation();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [companyOverviewData, setCompanyOverviewData] = useState();
   let params = useParams();
@@ -18,7 +20,7 @@ function CompanyTabs(props) {
   const tabsList = React.useMemo(
     () => [
       {
-        label: "Dashboard",
+        label: t("navBar.companiesData.tabs.dashboard.title"),
         routeName: "dashboard",
         Component: CompanyDashboard,
         propsArgs: {
@@ -26,7 +28,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: "Overview",
+        label: t("navBar.companiesData.tabs.overview.title"),
         routeName: "overview",
         Component: CompanyOverview,
         propsArgs: {
@@ -34,7 +36,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: "Immediate Reports",
+        label: t("navBar.companiesData.tabs.immediateReports.title"),
         routeName: "immedreports",
         Component: CompanyImedReports,
         propsArgs: {
@@ -42,7 +44,7 @@ function CompanyTabs(props) {
         },
       },
       {
-        label: "Stock Price",
+        label: t("navBar.companiesData.tabs.stockPrice.title"),
         routeName: "stockprice",
         Component: CompanyStockPrice,
         propsArgs: {
@@ -50,7 +52,7 @@ function CompanyTabs(props) {
         },
       },
     ],
-    [companyOverviewData]
+    [companyOverviewData, t]
   );
 
   useEffect(() => {
@@ -63,13 +65,15 @@ function CompanyTabs(props) {
 
   return (
     <React.Fragment>
-      {companyOverviewData && (
-        <CustomTabs
-          tabsList={tabsList}
-          allowHideTabsInScroll={true}
-          {...(!isSmallScreen && { orientation: "vertical" })}
-        />
-      )}
+      <Suspense fallback="loading">
+        {companyOverviewData && (
+          <CustomTabs
+            tabsList={tabsList}
+            allowHideTabsInScroll={true}
+            {...(!isSmallScreen && { orientation: "vertical" })}
+          />
+        )}
+      </Suspense>
     </React.Fragment>
   );
 }

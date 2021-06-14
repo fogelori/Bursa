@@ -3,8 +3,11 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import CountUp from "react-countup";
 import AutoTrendingIconDirection from "../../../../../icons/AutoTrendingIconDirection";
+import { useTranslation } from "react-i18next";
 
 function FinanceItem(props) {
+  const { t, i18n } = useTranslation();
+
   console.log("FinanceItem Rendered");
 
   return (
@@ -29,7 +32,10 @@ function FinanceItem(props) {
       {props.change && (
         <Typography variant="body2" component="p">
           <AutoTrendingIconDirection number={props.change} />
-          {props.change}% in last period
+          {props.change}%{" "}
+          {t(
+            "navBar.companiesData.tabs.dashboard.financialReports.changeDescription"
+          )}
         </Typography>
       )}
     </Box>

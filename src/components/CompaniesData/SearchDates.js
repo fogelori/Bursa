@@ -8,8 +8,13 @@ import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
 import CustomDateToolbar from "./CustomDateToolbar";
 import "./SearchDates.css";
+import { useTranslation } from "react-i18next";
 
 function SearchDates({ dateObject, onChangeDate, onClickButton }) {
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.components.searchDates", {
+    returnObjects: true,
+  });
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,11 +24,11 @@ function SearchDates({ dateObject, onChangeDate, onClickButton }) {
           variant="inline"
           autoOk
           KeyboardButtonProps={{ size: "small" }}
-          label="Start date"
+          label={translationObj.startDate}
           inputVariant="outlined"
           onClose={() => setIsOpen(true)}
           ToolbarComponent={(props) => (
-            <CustomDateToolbar {...props} label="Start Date" />
+            <CustomDateToolbar {...props} label={translationObj.startDate} />
           )}
           value={dateObject.startDate}
           onChange={(date) => onChangeDate(date, "startDate")}
@@ -36,13 +41,13 @@ function SearchDates({ dateObject, onChangeDate, onClickButton }) {
           variant="inline"
           autoOk
           KeyboardButtonProps={{ size: "small" }}
-          label="End date"
+          label={translationObj.endDate}
           inputVariant="outlined"
           open={isOpen}
           onOpen={() => setIsOpen(true)}
           onClose={() => setIsOpen(false)}
           ToolbarComponent={(props) => (
-            <CustomDateToolbar {...props} label="End Date" />
+            <CustomDateToolbar {...props} label={translationObj.endDate} />
           )}
           value={dateObject.endDate}
           onChange={(date) => onChangeDate(date, "endDate")}

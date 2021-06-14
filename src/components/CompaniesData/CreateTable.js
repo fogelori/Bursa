@@ -10,6 +10,7 @@ import {
   GridToolbarExport,
   // GridRowsProp,
 } from "@material-ui/data-grid";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +29,10 @@ function CustomToolbar() {
 }
 
 function CreateTable(props) {
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.components.createTable", {
+    returnObjects: true,
+  });
   const classes = useStyles();
 
   // const additionalProps = props.rows.length > 30 && {
@@ -73,6 +78,9 @@ https://stackoverflow.com/questions/57787218/react-material-table-automatic-page
       //   Toolbar: CustomToolbar,
       // }}
       className={classes.root}
+      localeText={{
+        ...translationObj,
+      }}
       {...(!props.isSimpleTable && {
         components: { Toolbar: CustomToolbar },
         hideFooter: false,

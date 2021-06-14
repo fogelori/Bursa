@@ -4,10 +4,12 @@ import InputField from "./InputField";
 import SearchIcon from "@material-ui/icons/Search";
 import { getCompaniesList } from "./FetchFunctions";
 import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function CompaniesDataInputFieldSearch() {
   let { path } = useRouteMatch();
   let history = useHistory();
+  const { t, i18n } = useTranslation();
   const [companiesList, setCompaniesList] = useState([]);
   const [value, setValue] = useState(null);
   const chosenCompany = useRef({});
@@ -29,14 +31,14 @@ function CompaniesDataInputFieldSearch() {
 
   useEffect(() => {
     updateCompaniesList();
-  }, []);
+  }, [t]);
 
   console.log("CompaniesDataInputFieldSearch Rendered");
 
   return (
     <React.Fragment>
       <InputField
-        label="Choose a company"
+        label={t("navBar.companiesData.searchCompany")}
         list={companiesList}
         propertyName="Name"
         setState={setValue}

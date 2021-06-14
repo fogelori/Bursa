@@ -8,6 +8,7 @@ import { useCreateColumns, createTableRows } from "./OrganizeTableStockPrice";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { useHideHeaderState } from "../../../../hideHeaderStore";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   companyStockPrice: {
@@ -41,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
 
 function CompanyStockPrice(props) {
   const classes = useStyles();
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.stockPrice", {
+    returnObjects: true,
+  });
   const hiddenHeader = useHideHeaderState();
   const [dateObject, setDateObject] = useState({
     startDate: new Date(),
@@ -86,7 +91,7 @@ function CompanyStockPrice(props) {
         })}
       >
         <InputField
-          label="Choose a stock"
+          label={translationObj.chooseStock}
           list={stockList}
           propertyName="SecurityName"
           value={companyChosenSecurity}

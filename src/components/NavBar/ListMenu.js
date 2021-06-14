@@ -1,6 +1,7 @@
 import List from "@material-ui/core/List";
-import Routes from "../Router/Routes";
+// import Routes from "../Router/Routes";
 import ListMenuItemLink from "./ListMenuItemLink";
+import { useGetMenuList } from "../Router/Routes";
 
 const style = {
   rowList: {
@@ -10,6 +11,7 @@ const style = {
 };
 
 function ListMenu(props) {
+  const Routes = useGetMenuList();
   return (
     <div className="listMenuComponent">
       <List style={props.direction === "row" ? style.rowList : undefined}>

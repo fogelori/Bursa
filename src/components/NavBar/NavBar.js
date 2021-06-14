@@ -4,6 +4,7 @@ import { Toolbar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SmallScreenMenu from "./SmallScreenMenu";
 import LargeScreenMenu from "./LargeScreenMenu";
+import SettingsMenu from "./SettingsMenu/SettingsMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbar: {
     paddingLeft: "0px",
+    paddingRight: "0px",
+    justifyContent: "space-between",
   },
   smallScreen: {
     [theme.breakpoints.up("sm")]: {
@@ -39,6 +42,9 @@ function NavBar() {
           </div>
           <div className={classes.largeScreen}>
             <LargeScreenMenu />
+          </div>
+          <div className="headerEnd">
+            <SettingsMenu />
           </div>
         </Toolbar>
       </AppBar>

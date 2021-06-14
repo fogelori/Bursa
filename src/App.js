@@ -7,6 +7,8 @@ import Routes from "./components/Router/RenderRoutes";
 import useCustomTheme from "./useCustomTheme";
 import "./App.css";
 import { StateHideHeaderProvider } from "./hideHeaderStore";
+import { Suspense } from "react";
+import RTL from "./RTL";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -22,18 +24,22 @@ function App() {
   const [local, theme] = useCustomTheme();
 
   return (
-    <ThemeProvider theme={theme}>
-      <StateHideHeaderProvider>
-        <div className="App" dir={local}>
-          <Router basename={process.env.PUBLIC_URL}>
-            <NavBar />
-            <div className={classes.body}>
-              <Routes />
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <RTL>
+        <ThemeProvider theme={theme}>
+          <StateHideHeaderProvider>
+            <div className="App" dir={local.direction}>
+              <Router basename={process.env.PUBLIC_URL}>
+                <NavBar />
+                <div className={classes.body}>
+                  <Routes />
+                </div>
+              </Router>
             </div>
-          </Router>
-        </div>
-      </StateHideHeaderProvider>
-    </ThemeProvider>
+          </StateHideHeaderProvider>
+        </ThemeProvider>
+      </RTL>
+    </Suspense>
   );
 }
 

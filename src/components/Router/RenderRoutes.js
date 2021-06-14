@@ -1,8 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Routes from "./Routes";
+// import Routes from "./Routes";
+import { useGetMenuList } from "./Routes";
 
 function RenderRoutes() {
+  const Routes = useGetMenuList();
   return (
     <Switch>
       {Routes.map((route, index) => {

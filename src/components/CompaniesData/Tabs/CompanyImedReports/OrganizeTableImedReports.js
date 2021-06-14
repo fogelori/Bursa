@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import CompanyImedReportDialog from "./CompanyImedReportDialog";
 import ShowIframe from "./ShowIframe";
+import { useTranslation } from "react-i18next";
+
 // import { useRouteMatch } from "react-router-dom";
 
 // const NewRenderCell = ({ params }) => {
@@ -21,6 +23,10 @@ export const useCreateColumns = (simpleTable) => {
   // let { url } = useRouteMatch();
   const [open, setOpen] = useState(false);
   const [chosenId, setChosenId] = useState();
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.immediateReports", {
+    returnObjects: true,
+  });
 
   const handleClick = (params) => {
     setOpen(true);
@@ -88,7 +94,7 @@ export const useCreateColumns = (simpleTable) => {
       ? [
           {
             field: "col1",
-            headerName: "Date",
+            headerName: translationObj.tableHeaders[0],
             width: 200,
             headerAlign: "center",
           },
@@ -96,9 +102,9 @@ export const useCreateColumns = (simpleTable) => {
       : []),
     {
       field: "col2",
-      headerName: "Subject",
+      headerName: translationObj.tableHeaders[1],
       flex: 1,
-      align: "right",
+      // align: "right",
       headerAlign: "center",
       renderCell: renderCellFunc,
     },

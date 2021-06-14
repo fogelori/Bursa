@@ -4,10 +4,12 @@ import Card from "@material-ui/core/Card";
 import Divider from "@material-ui/core/Divider";
 import CustomCardHeader from "../../CompanyOverview/CustomCardHeader";
 import FinanceBodyCard from "./FinanceBodyCard";
+import { useTranslation } from "react-i18next";
 
 function FinancialCard(props) {
+  const { t, i18n } = useTranslation();
   const headerObject = {
-    headerText: "Financial Reports",
+    headerText: t("navBar.companiesData.tabs.dashboard.financialReports.title"),
   };
 
   console.log("FinancialCard Rendered");

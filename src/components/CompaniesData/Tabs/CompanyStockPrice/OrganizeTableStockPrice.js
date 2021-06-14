@@ -1,11 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const useCreateColumns = () => {
+  const { t, i18n } = useTranslation();
+  const translationObj = t("navBar.companiesData.tabs.stockPrice", {
+    returnObjects: true,
+  });
   return React.useMemo(
     () => [
       {
         field: "col1",
-        headerName: "Date",
+        headerName: translationObj.tableHeaders[0],
         // width: 200,
         flex: 1,
         headerAlign: "center",
@@ -13,50 +18,50 @@ export const useCreateColumns = () => {
       },
       {
         field: "col2",
-        headerName: "Closing Price",
+        headerName: translationObj.tableHeaders[1],
         flex: 1,
-        align: "right",
+        // align: "right",
         headerAlign: "center",
-        type: "number",
+        // type: "number",
       },
       {
         field: "col3",
-        headerName: "Base Price",
+        headerName: translationObj.tableHeaders[2],
         flex: 1,
-        align: "right",
+        // align: "right",
         headerAlign: "center",
         hide: true,
-        type: "number",
+        // type: "number",
       },
       {
         field: "col4",
-        headerName: "Open Price",
+        headerName: translationObj.tableHeaders[3],
         flex: 1,
-        align: "right",
+        // align: "right",
         headerAlign: "center",
         hide: true,
-        type: "number",
+        // type: "number",
       },
       {
         field: "col5",
-        headerName: "High Price",
+        headerName: translationObj.tableHeaders[4],
         flex: 1,
-        align: "right",
+        // align: "right",
         headerAlign: "center",
         // hide: true,
-        type: "number",
+        // type: "number",
       },
       {
         field: "col6",
-        headerName: "Low Price",
+        headerName: translationObj.tableHeaders[5],
         flex: 1,
-        align: "right",
+        // align: "right",
         headerAlign: "center",
         hide: true,
-        type: "number",
+        // type: "number",
       },
     ],
-    []
+    [translationObj]
   );
 };
 
