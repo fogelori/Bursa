@@ -51,7 +51,7 @@ function SettingsMenu() {
         <Paper>
           <ClickAwayListener onClickAway={handleClose}>
             <List>
-              <ListItemLanguage />
+              <ListItemLanguage closeSettingsDialog={handleClose} />
               {/* <ListItemDarkMode /> */}
             </List>
           </ClickAwayListener>

@@ -22,12 +22,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ListItemLanguage() {
+function ListItemLanguage(props) {
   const classes = useStyles();
   // const [language, setLanguage] = React.useState(i18next.language);
 
   const handleChangeLng = (event) => {
     i18next.changeLanguage(event.target.value);
+    props.closeSettingsDialog();
     // window.location.reload();
     // setLanguage(event.target.value);
   };

@@ -30,6 +30,10 @@ const useHideOnScrolled = (elRef) => {
     const handleScroll = debounce((event) => {
       // if (event.target.className == elRef.current.className) {
       console.log("scroll handler");
+      const contractTriggerCls =
+        document.getElementsByClassName("contract-trigger")[0];
+      // if (elRef.current !== event.target) return;
+      if (contractTriggerCls === event.target) return;
       const currentScrollPos = event.target.scrollTop - event.target.offsetTop;
       const hiddenHeader =
         prevScrollpos.current <= currentScrollPos && event.target.scrollTop > 1;
